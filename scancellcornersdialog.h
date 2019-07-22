@@ -21,12 +21,17 @@ public:
 
 private:
     Ui::ScanCellCornersDialog *ui;
-    cv::Mat image;
+
     cv::Mat image_show;
     QTimer *timer;
+    bool isInitFinsh = false;
+
+    std::vector<cv::Point> *cellCorners_temp;
+    std::vector<cv::Point>  *boardCorners_temp;
 
 private slots:
     void update();
+    void on_tableWidget_cellChanged(int row, int column);
 };
 
 #endif // SCANCELLCORNERSDIALOG_H

@@ -436,6 +436,8 @@ bool ScanCellCorners(const Mat& boardImage, int blockSize, double cornerThreshol
 
     ScanCellCornersDialog *cellCornerDialog = new ScanCellCornersDialog(boardImage,cellCorners,boardCorners);
 
+
+
     cellCornerDialog->exec();
 
     delete cellCornerDialog;
