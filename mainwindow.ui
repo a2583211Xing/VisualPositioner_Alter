@@ -27,83 +27,9 @@
      <string>打开图片</string>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>50</y>
-      <width>311</width>
-      <height>481</height>
-     </rect>
-    </property>
-    <column>
-     <property name="text">
-      <string>像素坐标 X</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>像素坐标 Y</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>物理坐标 X</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>物理坐标 Y</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>12</x>
-      <y>52</y>
-      <width>631</width>
-      <height>481</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;图片显示&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="ScrollArea" name="scrollArea">
-       <property name="widgetResizable">
-        <bool>true</bool>
-       </property>
-       <widget class="QWidget" name="scrollAreaWidgetContents">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>627</width>
-          <height>457</height>
-         </rect>
-        </property>
-       </widget>
-      </widget>
-     </item>
-    </layout>
-   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <customwidgets>
-  <customwidget>
-   <class>ScrollArea</class>
-   <extends>QScrollArea</extends>
-   <header location="global">scrollarea.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

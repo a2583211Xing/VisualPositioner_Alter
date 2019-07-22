@@ -4,6 +4,7 @@
 #include <queue>
 #include <algorithm>
 #include <map>
+#include "scancellcornersdialog.h"
 
 using namespace std;
 using namespace cv;
@@ -327,6 +328,9 @@ Point GetBoardPosition(const Mat& boardImage, const vector<Point>& cellBoxCorner
 bool ScanCellCorners(const Mat& boardImage, int blockSize, double cornerThreshold,
 	vector<Point>& cellCorners, vector<Point>& boardCorners)
 {
+
+
+
 	// 计算角点响应头，过滤低响应区域。
 	Mat corner_response = ComputeCornerResponse(boardImage, blockSize);
 	double potential_corner_threshold = cornerThreshold * 0.8;
@@ -429,6 +433,10 @@ bool ScanCellCorners(const Mat& boardImage, int blockSize, double cornerThreshol
 		if (board_corner == Point(-1, -1)) return false;
 		boardCorners.push_back(board_corner);
 	}
+
+    ScanCellCornersDialog *cellCornerDialog = new ScanCellCornersDialog(boardImage,cellCorners,boardCorners);
+
+    cellCornerDialog->exec();
 
 	return true;
 }

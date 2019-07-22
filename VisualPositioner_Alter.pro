@@ -31,7 +31,8 @@ SOURCES += \
     VisualPositioner/Utils.cpp \
     VisualPositioner/VisualPositioner.cpp \
     label_x.cpp \
-    scrollarea.cpp
+    scrollarea.cpp \
+    scancellcornersdialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -41,10 +42,12 @@ HEADERS += \
     VisualPositioner/Utils.h \
     VisualPositioner/VisualPositioner.h \
     label_x.h \
-    scrollarea.h
+    scrollarea.h \
+    scancellcornersdialog.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    scancellcornersdialog.ui
 
 
 
