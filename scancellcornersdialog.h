@@ -2,6 +2,8 @@
 #define SCANCELLCORNERSDIALOG_H
 
 #include <QDialog>
+#include <QTableWidgetItem>
+#include <QTimer>
 #include <opencv2/opencv.hpp>
 
 namespace Ui {
@@ -19,6 +21,12 @@ public:
 
 private:
     Ui::ScanCellCornersDialog *ui;
+    cv::Mat image;
+    cv::Mat image_show;
+    QTimer *timer;
+
+private slots:
+    void update();
 };
 
 #endif // SCANCELLCORNERSDIALOG_H
