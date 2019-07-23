@@ -19,7 +19,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+
+
+    void on_pushButton_calibration_registerCamera_clicked();
+
+    void on_pushButton_calibration_rotationCenter_clicked();
+
+    void on_pushButton_calibration_translationDirection_clicked();
 
 private:
     Ui::MainWindow *ui;

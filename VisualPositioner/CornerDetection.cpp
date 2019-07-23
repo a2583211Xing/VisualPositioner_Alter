@@ -430,7 +430,7 @@ bool ScanCellCorners(const Mat& boardImage, int blockSize, double cornerThreshol
 	{
 		cellCorners.push_back(cell_box_corners[0]);
 		Point board_corner = GetBoardPosition(boardImage, cell_box_corners);
-		if (board_corner == Point(-1, -1)) return false;
+//		if (board_corner == Point(-1, -1)) return false;
 		boardCorners.push_back(board_corner);
 	}
 
