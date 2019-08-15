@@ -84,7 +84,13 @@ protected:
 
     cv::Point2d ComputeOptimalIntersection(const std::vector<cv::Vec4d>& lines);
 
-\
+    std::vector<cv::Point2d> LinearSearch(const cv::Mat& image, cv::Rect roi,int threshold = 40, int num = 10, Direction dire = LeftToRight,  Polarity polar = WhiteToBlack, );
+
+    cv::Point SearchPoint2(const cv::Mat& image, const cv::Rect& roi,int threshold, Direction dire,Polarity polar);
+
+    cv::Mat linear(std::vector<cv::Point>& points );
+
+
 
 
 

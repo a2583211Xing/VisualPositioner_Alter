@@ -14,6 +14,20 @@ enum Camera
 	RightCamera = 2
 };
 
+enum Direction
+{
+    LeftToRight = 0,
+    RightToLeft = 1,
+    TopToBottom = 2,
+    BottomToTop = 3
+};
+
+enum Polarity
+{
+    BlackToWhite,
+    WhiteToBlack
+};
+
 enum class PositioningError
 {
 	NoError,
