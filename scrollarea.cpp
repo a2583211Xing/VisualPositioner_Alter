@@ -177,7 +177,12 @@ bool ScrollArea::eventFilter(QObject *obj, QEvent *evt)
             if ((mouseEvent->buttons() & Qt::RightButton))
             {
 
-                isDraw = false;
+                cv::Rect rect = cv::Rect(cv::Point(imageLabel->leftUP.x(),imageLabel->leftUP.y()),
+                                         cv::Point(imageLabel->rightDown.x(),imageLabel->rightDown.y()));
+
+                emit drawRectSignal(rect);
+
+                this->setDraw( false);
             }
 
         }
@@ -252,6 +257,13 @@ void ScrollArea::shrinkImage()
         return ;
     wheelIndex--;
     imageLabel->setFixedSize(sizeList.at(wheelIndex));
+
+}
+
+void ScrollArea::setDraw(bool temp)
+{
+    this->isDraw = temp;
+    imageLabel->isDraw = temp;
 
 }
 

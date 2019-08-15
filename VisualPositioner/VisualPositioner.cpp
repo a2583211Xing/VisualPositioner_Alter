@@ -129,6 +129,132 @@ bool VisualPositioner::loadSettings(string configFile)
 			}
 		}
 
+        if (settings.count("Camer1Line1ROI"))
+        {
+            camer1Line1ROI.clear();
+            camer1Line1ROI.push_back(cv::Rect());
+            camer1Line1ROI.push_back(cv::Rect());
+            if (settings["Camer1Line1ROI"].count("Rect1"))
+            {
+                camer1Line1ROI.at(0).x      = settings["Camer1Line1ROI"]["Rect1"][0].get<int>();
+                camer1Line1ROI.at(0).y      = settings["Camer1Line1ROI"]["Rect1"][1].get<int>();
+                camer1Line1ROI.at(0).width  = settings["Camer1Line1ROI"]["Rect1"][2].get<int>();
+                camer1Line1ROI.at(0).height = settings["Camer1Line1ROI"]["Rect1"][3].get<int>();
+
+
+
+            }
+            if (settings["Camer1Line1ROI"].count("Rect2"))
+            {
+                camer1Line1ROI.at(1).x      = settings["Camer1Line1ROI"]["Rect2"][0].get<int>();
+                camer1Line1ROI.at(1).y      = settings["Camer1Line1ROI"]["Rect2"][1].get<int>();
+                camer1Line1ROI.at(1).width  = settings["Camer1Line1ROI"]["Rect2"][2].get<int>();
+                camer1Line1ROI.at(1).height = settings["Camer1Line1ROI"]["Rect2"][3].get<int>();
+            }
+        }
+
+        if (settings.count("Camer1line1Direction"))
+        {
+            camer1line1Direction = settings["Camer1line1Direction"].get<int>();
+        }
+        if (settings.count("Camer1line1Threshold"))
+        {
+            camer1line1Threshold = settings["Camer1line1Threshold"].get<int>();
+        }
+
+
+        if (settings.count("Camer1Line2ROI"))
+        {
+            camer1Line2ROI.clear();
+            camer1Line2ROI.push_back(cv::Rect());
+            camer1Line2ROI.push_back(cv::Rect());
+            if (settings["Camer1Line2ROI"].count("Rect1"))
+            {
+                camer1Line2ROI.at(0).x      = settings["Camer1Line2ROI"]["Rect1"][0].get<int>();
+                camer1Line2ROI.at(0).y      = settings["Camer1Line2ROI"]["Rect1"][1].get<int>();
+                camer1Line2ROI.at(0).width  = settings["Camer1Line2ROI"]["Rect1"][2].get<int>();
+                camer1Line2ROI.at(0).height = settings["Camer1Line2ROI"]["Rect1"][3].get<int>();
+            }
+            if (settings["Camer1Line2ROI"].count("Rect2"))
+            {
+                camer1Line2ROI.at(1).x      = settings["Camer1Line2ROI"]["Rect2"][0].get<int>();
+                camer1Line2ROI.at(1).y      = settings["Camer1Line2ROI"]["Rect2"][1].get<int>();
+                camer1Line2ROI.at(1).width  = settings["Camer1Line2ROI"]["Rect2"][2].get<int>();
+                camer1Line2ROI.at(1).height = settings["Camer1Line2ROI"]["Rect2"][3].get<int>();
+            }
+        }
+
+        if (settings.count("Camer1line2Direction"))
+        {
+            camer1line2Direction = settings["Camer1line2Direction"].get<int>();
+        }
+        if (settings.count("Camer1line2Threshold"))
+        {
+            camer1line2Threshold = settings["Camer1line2Threshold"].get<int>();
+        }
+
+        //camer2
+        if (settings.count("Camer2Line1ROI"))
+        {
+            camer2Line1ROI.clear();
+            camer2Line1ROI.push_back(cv::Rect());
+            camer2Line1ROI.push_back(cv::Rect());
+            if (settings["Camer2Line1ROI"].count("Rect1"))
+            {
+                camer2Line1ROI.at(0).x      = settings["Camer2Line1ROI"]["Rect1"][0].get<int>();
+                camer2Line1ROI.at(0).y      = settings["Camer2Line1ROI"]["Rect1"][1].get<int>();
+                camer2Line1ROI.at(0).width  = settings["Camer2Line1ROI"]["Rect1"][2].get<int>();
+                camer2Line1ROI.at(0).height = settings["Camer2Line1ROI"]["Rect1"][3].get<int>();
+            }
+            if (settings["Camer2Line1ROI"].count("Rect2"))
+            {
+                camer2Line1ROI.at(1).x      = settings["Camer2Line1ROI"]["Rect2"][0].get<int>();
+                camer2Line1ROI.at(1).y      = settings["Camer2Line1ROI"]["Rect2"][1].get<int>();
+                camer2Line1ROI.at(1).width  = settings["Camer2Line1ROI"]["Rect2"][2].get<int>();
+                camer2Line1ROI.at(1).height = settings["Camer2Line1ROI"]["Rect2"][3].get<int>();
+            }
+        }
+
+        if (settings.count("Camer2line1Direction"))
+        {
+            camer2line1Direction = settings["Camer2line1Direction"].get<int>();
+        }
+        if (settings.count("Camer2line1Direction"))
+        {
+            camer2line1Threshold = settings["Camer2line1Threshold"].get<int>();
+        }
+
+
+        if (settings.count("Camer2Line2ROI"))
+        {
+            camer2Line2ROI.clear();
+            camer2Line2ROI.push_back(cv::Rect());
+            camer2Line2ROI.push_back(cv::Rect());
+            if (settings["Camer2Line2ROI"].count("Rect1"))
+            {
+                camer2Line2ROI.at(0).x      = settings["Camer2Line2ROI"]["Rect1"][0].get<int>();
+                camer2Line2ROI.at(0).y      = settings["Camer2Line2ROI"]["Rect1"][1].get<int>();
+                camer2Line2ROI.at(0).width  = settings["Camer2Line2ROI"]["Rect1"][2].get<int>();
+                camer2Line2ROI.at(0).height = settings["Camer2Line2ROI"]["Rect1"][3].get<int>();
+            }
+            if (settings["Camer2Line2ROI"].count("Rect2"))
+            {
+                camer2Line2ROI.at(1).x      = settings["Camer2Line2ROI"]["Rect2"][0].get<int>();
+                camer2Line2ROI.at(1).y      = settings["Camer2Line2ROI"]["Rect2"][1].get<int>();
+                camer2Line2ROI.at(1).width  = settings["Camer2Line2ROI"]["Rect2"][2].get<int>();
+                camer2Line2ROI.at(1).height = settings["Camer2Line2ROI"]["Rect2"][3].get<int>();
+            }
+        }
+
+        if (settings.count("Camer2line2Direction"))
+        {
+            camer2line2Direction = settings["Camer2line2Direction"].get<int>();
+        }
+        if (settings.count("Camer2line2Threshold"))
+        {
+            camer2line2Threshold = settings["Camer2line2Threshold"].get<int>();
+        }
+
 		settings_file.close();
 		errors.clear();
 		return true;
@@ -142,6 +268,77 @@ bool VisualPositioner::loadSettings(string configFile)
 
 bool VisualPositioner::saveSettings(string configFile)
 {
+    //camer1
+    vector<int> rect;
+    rect.push_back(camer1Line1ROI.at(0).x);
+    rect.push_back(camer1Line1ROI.at(0).y);
+    rect.push_back(camer1Line1ROI.at(0).width);
+    rect.push_back(camer1Line1ROI.at(0).height);
+    settings["Camer1Line1ROI"]["Rect1"] = rect;
+
+    rect.clear();
+    rect.push_back(camer1Line1ROI.at(1).x);
+    rect.push_back(camer1Line1ROI.at(1).y);
+    rect.push_back(camer1Line1ROI.at(1).width);
+    rect.push_back(camer1Line1ROI.at(1).height);
+    settings["Camer1Line1ROI"]["Rect2"] = rect;
+
+    rect.clear();
+    rect.push_back(camer1Line2ROI.at(0).x);
+    rect.push_back(camer1Line2ROI.at(0).y);
+    rect.push_back(camer1Line2ROI.at(0).width);
+    rect.push_back(camer1Line2ROI.at(0).height);
+    settings["Camer1Line2ROI"]["Rect1"] = rect;
+
+    rect.clear();
+    rect.push_back(camer1Line2ROI.at(1).x);
+    rect.push_back(camer1Line2ROI.at(1).y);
+    rect.push_back(camer1Line2ROI.at(1).width);
+    rect.push_back(camer1Line2ROI.at(1).height);
+    settings["Camer1Line2ROI"]["Rect2"] = rect;
+
+    settings["Camer1line1Direction"] = camer1line1Direction;
+    settings["Camer1line1Threshold"] = camer1line1Threshold;
+    settings["Camer1line2Direction"] = camer1line2Direction;
+    settings["Camer1line2Threshold"] = camer1line2Threshold;
+
+
+
+    //camer2
+    rect.clear();
+    rect.push_back(camer2Line1ROI.at(0).x);
+    rect.push_back(camer2Line1ROI.at(0).y);
+    rect.push_back(camer2Line1ROI.at(0).width);
+    rect.push_back(camer2Line1ROI.at(0).height);
+    settings["Camer2Line1ROI"]["Rect1"] = rect;
+
+    rect.clear();
+    rect.push_back(camer2Line1ROI.at(1).x);
+    rect.push_back(camer2Line1ROI.at(1).y);
+    rect.push_back(camer2Line1ROI.at(1).width);
+    rect.push_back(camer2Line1ROI.at(1).height);
+    settings["Camer2Line1ROI"]["Rect2"] = rect;
+
+    rect.clear();
+    rect.push_back(camer2Line2ROI.at(0).x);
+    rect.push_back(camer2Line2ROI.at(0).y);
+    rect.push_back(camer2Line2ROI.at(0).width);
+    rect.push_back(camer2Line2ROI.at(0).height);
+    settings["Camer2Line2ROI"]["Rect1"] = rect;
+
+    rect.clear();
+    rect.push_back(camer2Line2ROI.at(1).x);
+    rect.push_back(camer2Line2ROI.at(1).y);
+    rect.push_back(camer2Line2ROI.at(1).width);
+    rect.push_back(camer2Line2ROI.at(1).height);
+    settings["Camer2Line2ROI"]["Rect2"] = rect;
+
+    settings["Camer2line1Direction"] = camer2line1Direction;
+    settings["Camer2line1Threshold"] = camer2line1Threshold;
+    settings["Camer2line2Direction"] = camer2line2Direction;
+    settings["Camer2line2Threshold"] = camer2line2Threshold;
+
+
 	ofstream settings_file(configFile);
 	if (settings_file.is_open())
 	{	
@@ -175,7 +372,30 @@ bool VisualPositioner::registerCamera(Camera camera, const Mat& boardImage)
 	vector<Point2d> refined_cell_corners;
 	for (const auto& corner : cell_corners)
 	{
-		Rect roi(corner.x - cornerBlockSize * 2, corner.y - cornerBlockSize * 2, cornerBlockSize * 4, cornerBlockSize * 4);
+        int LX = corner.x - cornerBlockSize * 2;
+        int LY = corner.y - cornerBlockSize * 2;
+        int RX = LX + cornerBlockSize * 4;
+        int RY = LY + cornerBlockSize * 4;
+        if (LX < 0)
+        {
+            LX = 0;
+        }
+        if (LY < 0)
+        {
+            LY = 0;
+        }
+        if (RX > boardImage.cols)
+        {
+            RX = boardImage.cols;
+        }
+
+        if (RY > boardImage.rows)
+        {
+            RY = boardImage.rows;
+        }
+
+        //Rect roi(corner.x - cornerBlockSize * 2, corner.y - cornerBlockSize * 2, cornerBlockSize * 4, cornerBlockSize * 4);
+        Rect roi(Point(LX,LY),Point(RX,RY));
 		Point refined_corner = DetectChessBoardCorner(boardImage(roi), cornerBlockSize, cornerThreshold);
 		if (refined_corner == Point())
 		{
@@ -333,7 +553,285 @@ Point2d VisualPositioner::ComputeTranslationDirection(Camera camera, const vecto
 	vector_2d = Affine2dTransform(vector_2d, camera2BoardTransforms.at(camera));
 
 	direction = vector_2d[1] - vector_2d[0];
-	return direction;
+    return direction;
+}
+
+Point VisualPositioner::SearchPoint(const Mat &image, const Rect &roi, int direction, int threshold)
+{
+    Mat roi_image = image(roi);
+
+    Point border_point(0, 0);
+
+    if(direction<2)
+    {
+        Mat col_sum;
+        reduce(roi_image, col_sum, 0, CV_REDUCE_AVG);
+        //从左到右
+        if(direction == 0 )
+            for (int i = 1; i < col_sum.cols - 1; i++)
+            {
+
+                if ( abs(col_sum.at<uchar>(0, i + 1) - col_sum.at<uchar>(0, i - 1)) >= threshold)
+                {
+                    border_point.x = roi.x + i;
+                    break;
+                }
+            }
+
+        //从右到左
+        if(direction == 1 )
+            for (int i = col_sum.cols - 2; i > 0; i--)
+            {
+                if ( abs (col_sum.at<uchar>(0, i - 1) - col_sum.at<uchar>(0, i + 1) ) >= threshold)
+                {
+                    border_point.x = roi.x + i;
+                    break;
+                }
+            }
+
+
+        if (border_point.x == 0)
+        {
+            border_point.x =roi.x + col_sum.cols;
+        }
+        border_point.y = roi.y + (roi.height / 2);
+    }
+    else
+    {
+        Mat row_sum;
+            reduce(roi_image, row_sum, 1, CV_REDUCE_AVG);
+        //从上到下
+        if(direction == 2 )
+            for (int i = 1; i < row_sum.rows -1; i++)
+            {
+                if (abs (row_sum.at<uchar>(i + 1, 0) - row_sum.at<uchar>(i - 1, 0)) >= threshold)
+                {
+                    border_point.y = roi.y + i;
+                    break;
+                }
+            }
+
+        //从下到上
+        if(direction == 3 )
+            for (int i = row_sum.rows - 2; i > 0; i--)
+            {
+                if (abs(row_sum.at<uchar>(i - 1, 0) - row_sum.at<uchar>(i + 1, 0)) >= threshold)
+                {
+                    border_point.y = roi.y + i;
+                    break;
+                }
+            }
+
+        if (border_point.y == 0)
+        {
+            border_point.y = roi.y + row_sum.rows;
+        }
+        border_point.x = roi.x + (roi.width / 2);
+    }
+
+
+
+
+    return border_point;
+}
+
+Point2d VisualPositioner::ComputeOptimalIntersection(const std::vector<Vec4d> &lines)
+{
+    Mat A = Mat::zeros(Size(2, 2), CV_64F);
+    Mat B = Mat::zeros(Size(1, 2), CV_64F);
+
+    for (auto line : lines)
+    {
+        Mat x0(Size(1, 2), CV_64F);
+        x0.at<double>(0, 0) = line.val[0];
+        x0.at<double>(1, 0) = line.val[1];
+        double vnorm = norm(line.val[2], line[3]);
+        line.val[2] /= vnorm;
+        line.val[3] /= vnorm;
+        Mat D(Size(2, 2), CV_64F);
+        D.at<double>(0, 0) = line.val[2] * line.val[2] - 1;
+        D.at<double>(0, 1) = line.val[2] * line.val[3];
+        D.at<double>(1, 0) = D.at<double>(0, 1);
+        D.at<double>(1, 1) = line.val[3] * line.val[3] - 1;
+        A = A + D;
+        B = B + (D * x0);
+    }
+    Mat p = A.inv() * B;
+
+    return Point2d(p.at<double>(0, 0), p.at<double>(1, 0));
+}
+
+Point2d VisualPositioner::ComputeLeftCamerIntersection(Mat &image)
+{
+    Mat image_shown;
+    cvtColor(image, image_shown, CV_GRAY2BGR);
+
+    vector<Point> line1_points;
+    for (const auto& roi : camer1Line1ROI)
+    {
+
+
+        Point border_point = SearchPoint(image, roi,camer1line1Direction,camer1line1Threshold);
+        if (border_point != Point(0, 0))
+        {
+            line1_points.push_back(border_point);
+        }
+    }
+
+    line(image_shown, line1_points[0], line1_points[1], Scalar(0, 0, 255));
+
+    vector<Point> line2_points;
+    for (const auto& roi : camer1Line2ROI)
+    {
+
+
+        Point border_point = SearchPoint(image, roi,camer1line2Direction,camer1line2Threshold);
+        if (border_point != Point(0, 0))
+        {
+            line2_points.push_back(border_point);
+        }
+    }
+
+    line(image_shown, line2_points[0], line2_points[1], Scalar(0, 0, 255));
+
+    vector<Vec4d> line1_lin2_intersection_lines = {
+        {
+            static_cast<double>(line1_points[0].x),  static_cast<double>(line1_points[0].y),
+            static_cast<double>(line1_points[1].x - line1_points[0].x),  static_cast<double>(line1_points[1].y - line1_points[0].y)
+        },
+        {
+            static_cast<double>(line2_points[0].x),  static_cast<double>(line2_points[0].y),
+            static_cast<double>(line2_points[1].x - line2_points[0].x),  static_cast<double>(line2_points[1].y - line2_points[0].y)
+        }
+    };
+
+
+
+
+
+    return ComputeOptimalIntersection(line1_lin2_intersection_lines);
+
+
+}
+
+Point2d VisualPositioner::ComputeRightCamerIntersection(Mat &image)
+{
+    vector<Point> line1_points;
+    for (const auto& roi : camer2Line1ROI)
+    {
+
+
+        Point border_point = SearchPoint(image, roi,camer2line1Direction,camer2line1Threshold);
+        if (border_point != Point(0, 0))
+        {
+            line1_points.push_back(border_point);
+        }
+    }
+
+    vector<Point> line2_points;
+    for (const auto& roi : camer2Line2ROI)
+    {
+
+
+        Point border_point = SearchPoint(image, roi,camer2line2Direction,camer2line2Threshold);
+        if (border_point != Point(0, 0))
+        {
+            line2_points.push_back(border_point);
+        }
+    }
+
+    vector<Vec4d> line1_lin2_intersection_lines = {
+        {
+            static_cast<double>(line1_points[0].x),  static_cast<double>(line1_points[0].y),
+            static_cast<double>(line1_points[1].x - line1_points[0].x),  static_cast<double>(line1_points[1].y - line1_points[0].y)
+        },
+        {
+            static_cast<double>(line2_points[0].x),  static_cast<double>(line2_points[0].y),
+            static_cast<double>(line2_points[1].x - line2_points[0].x),  static_cast<double>(line2_points[1].y - line2_points[0].y)
+        }
+    };
+
+
+
+    return ComputeOptimalIntersection(line1_lin2_intersection_lines);
+}
+
+Mat VisualPositioner::ComputeLeftCamerIntersectionShow(Mat &image)
+{
+    Mat image_shown;
+    cvtColor(image, image_shown, CV_GRAY2BGR);
+
+    vector<Point> line1_points;
+    for (const auto& roi : camer1Line1ROI)
+    {
+
+
+        Point border_point = SearchPoint(image, roi,camer1line1Direction,camer1line1Threshold);
+        if (border_point != Point(0, 0))
+        {
+            line1_points.push_back(border_point);
+        }
+    }
+
+    line(image_shown, line1_points[0], line1_points[1], Scalar(0, 0, 255),8);
+
+    vector<Point> line2_points;
+    for (const auto& roi : camer1Line2ROI)
+    {
+
+
+        Point border_point = SearchPoint(image, roi,camer1line2Direction,camer1line2Threshold);
+        if (border_point != Point(0, 0))
+        {
+            line2_points.push_back(border_point);
+        }
+    }
+
+    line(image_shown, line2_points[0], line2_points[1], Scalar(0, 0, 255),8);
+
+
+
+
+
+    return image_shown;
+}
+
+Mat VisualPositioner::ComputeRightCamerIntersectionShow(Mat &image)
+{
+    Mat image_shown;
+    cvtColor(image, image_shown, CV_GRAY2BGR);
+
+    vector<Point> line1_points;
+    for (const auto& roi : camer2Line1ROI)
+    {
+
+
+        Point border_point = SearchPoint(image, roi,camer2line1Direction,camer2line1Threshold);
+        if (border_point != Point(0, 0))
+        {
+            line1_points.push_back(border_point);
+        }
+    }
+
+    line(image_shown, line1_points[0], line1_points[1], Scalar(0, 0, 255),8);
+
+    vector<Point> line2_points;
+    for (const auto& roi : camer2Line2ROI)
+    {
+
+
+        Point border_point = SearchPoint(image, roi,camer2line2Direction,camer2line2Threshold);
+        if (border_point != Point(0, 0))
+        {
+            line2_points.push_back(border_point);
+        }
+    }
+
+    line(image_shown, line2_points[0], line2_points[1], Scalar(0, 0, 255),8);
+
+
+
+    return image_shown;
 }
 
 
@@ -383,10 +881,17 @@ bool VisualPositioner::registerStandardPosition(const std::map<Camera, cv::Mat>&
 		}
 
 		Mat product_image = product_image_entry.second;
-		Rect cross_mark_region = FindCrossMarkRegion(product_image);
-		Point cross_center = DetectCrossMark(product_image, crossMarkLength, crossMarkStripWidth, crossMarkThreshold, 
-			cross_mark_region);
-		if (cross_center == Point())
+        Point2d cross_center = Point2d();
+        if(product_image_entry.first == LeftCamera)
+        {
+            cross_center = ComputeLeftCamerIntersection(product_image);
+        }
+        else
+        {
+            cross_center = ComputeRightCamerIntersection(product_image);
+        }
+
+        if (cross_center == Point2d())
 		{
 			errors.push_back(PositioningError::CrossMarkDetectionFailure);
 			return false;
@@ -505,10 +1010,21 @@ bool VisualPositioner::computeAlignParameters(const map<Camera, Mat>& productIma
 		}
 
 		Mat product_image = product_image_entry.second;
-		Rect cross_mark_region = FindCrossMarkRegion(product_image);
-		Point cross_center = DetectCrossMark(product_image, crossMarkLength, crossMarkStripWidth, crossMarkThreshold, 
-			cross_mark_region);
-		if (cross_center == Point())
+        Point2d cross_center = Point2d();
+        if(product_image_entry.first == LeftCamera)
+        {
+            cross_center = ComputeLeftCamerIntersection(product_image);
+            circle(product_image,cross_center,10,Scalar(0,0,255),4);
+
+        }
+        else
+        {
+            cross_center = ComputeRightCamerIntersection(product_image);
+            circle(product_image,cross_center,10,Scalar(0,0,255),4);
+
+        }
+
+        if (cross_center == Point2d())
 		{
 			errors.push_back(PositioningError::CrossMarkDetectionFailure);
 			return false;

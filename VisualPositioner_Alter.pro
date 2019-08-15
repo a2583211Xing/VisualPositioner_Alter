@@ -32,7 +32,8 @@ SOURCES += \
     VisualPositioner/VisualPositioner.cpp \
     label_x.cpp \
     scrollarea.cpp \
-    scancellcornersdialog.cpp
+    scancellcornersdialog.cpp \
+    camer_hk.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -43,7 +44,8 @@ HEADERS += \
     VisualPositioner/VisualPositioner.h \
     label_x.h \
     scrollarea.h \
-    scancellcornersdialog.h
+    scancellcornersdialog.h \
+    camer_hk.h
 
 FORMS += \
         mainwindow.ui \
@@ -67,3 +69,16 @@ LIBS += -L$${ProPATH}/opencv344/lib/ \
 
 #json
 INCLUDEPATH += $${ProPATH}/cpp-json
+
+#camer_HK
+INCLUDEPATH += $${ProPATH}/camer_HK/include
+LIBS += -L$${ProPATH}/camer_HK/lib/ -lMvCameraControl
+
+#log4cxx
+INCLUDEPATH += $${ProPATH}/log4cxx/include
+LIBS += -L$${ProPATH}/log4cxx/lib/ -llog4cxx
+
+
+#DMC
+INCLUDEPATH += $${ProPATH}/DMC5000/include
+LIBS += -L$${ProPATH}/DMC5000/dll/ -lLTDMC

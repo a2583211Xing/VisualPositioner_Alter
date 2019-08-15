@@ -18,9 +18,12 @@ protected:
 
 public:
     cv::Mat img;
-    bool isDraw;
+    cv::Mat imageShow;
+    bool isDraw = false;
     QPoint pressPoint;
     QPoint releasePoint;
+    QPoint leftUP;
+    QPoint rightDown;
 
 public:
     void setImage(cv::Mat img);

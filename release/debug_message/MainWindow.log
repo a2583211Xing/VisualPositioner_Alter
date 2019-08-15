@@ -1,0 +1,15 @@
+20190807-10:25:24,665: INFO-MainWindow (Thread id: 0x00004064) [InitLog:840] 
+
+
+                          start    MainWindow   system!!                         
+
+************************** 1.0.0 Aug  7 2019--10:10:53 ********************* 
+
+
+20190807-10:25:24,665:DEBUG-MainWindow (Thread id: 0x00004064) [initSetting:767] initSetting Start
+20190807-10:25:24,669:DEBUG-MainWindow (Thread id: 0x00004064) [initSetting:801] initSetting End
+20190807-10:25:24,669:DEBUG-MainWindow (Thread id: 0x00004064) [initVisualPositioner:305] initVisualPositioner Start
+20190807-10:25:24,671:DEBUG-MainWindow (Thread id: 0x00004064) [initVisualPositioner:369] initVisualPositioner End
+20190807-10:25:24,671:DEBUG-MainWindow (Thread id: 0x00004064) [initCamer:374] initCamer Start
+20190807-10:25:25,498:DEBUG-MainWindow (Thread id: 0x00004064) [initCamer:412] initCamer End
+20190807-10:25:25,498:DEBUG-MainWindow (Thread id: 0x00004064) [initMotionControl:417] initMotionControl Start

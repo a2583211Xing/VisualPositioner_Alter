@@ -1,0 +1,11 @@
+20190812-16:14:23,243: INFO-MainWindow (Thread id: 0x00004cf8) [InitLog:870] 
+
+
+                          start    MainWindow   system!!                         
+
+************************** 1.0.0 Aug 12 2019--16:14:17 ********************* 
+
+
+20190812-16:14:23,243:DEBUG-MainWindow (Thread id: 0x00004cf8) [initSetting:797] initSetting Start
+20190812-16:14:23,244:DEBUG-MainWindow (Thread id: 0x00004cf8) [initSetting:831] initSetting End
+20190812-16:14:23,244:DEBUG-MainWindow (Thread id: 0x00004cf8) [initVisualPositioner:312] initVisualPositioner Start

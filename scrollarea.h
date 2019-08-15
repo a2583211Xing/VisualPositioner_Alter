@@ -16,21 +16,6 @@ public:
     ScrollArea(QWidget* parent =NULL);
     ~ScrollArea();
 
-protected:
-    bool eventFilter(QObject *obj, QEvent *evt);
-
- private:
-    bool mMoveStart;
-    bool mContinuousMove;
-    QPoint mMousePoint;
-    double radio = 1;
-    int wheelIndex = 0;
-    QSize imageSize;
-    QList<QSize> sizeList;
-
-
-
-
 
 public:
     Label_X *imageLabel;
@@ -39,9 +24,24 @@ public:
     void shrinkImage();
 
 public:
+    void setDraw(bool temp);
+
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *evt);
+
+private:
     bool isDraw = false;
-    QPoint pressPoint;
-    QPoint releasePoint;
+    bool mMoveStart;
+    bool mContinuousMove;
+    QPoint mMousePoint;
+    double radio = 1;
+    int wheelIndex = 0;
+    QSize imageSize;
+    QList<QSize> sizeList;
+
+signals:
+    void drawRectSignal(cv::Rect);
 
 
 

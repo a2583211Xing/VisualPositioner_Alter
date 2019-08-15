@@ -14,6 +14,7 @@
 #include <map>
 #include <opencv2\core.hpp>
 #include <nlohmann\json.hpp>
+#include <opencv2/opencv.hpp>
 
 
 class VisualPositioner
@@ -44,6 +45,31 @@ public:
 	/*计算矫正参数：rotation，translation(平移量，方向）*/
 	bool computeAlignParameters(const std::map<Camera, cv::Mat>& productImages, double& rotation, cv::Point2d& translation);
 
+
+
+public:
+    std::vector<cv::Rect> camer1Line1ROI;
+    int camer1line1Direction;
+    int camer1line1Threshold;
+
+    std::vector<cv::Rect> camer1Line2ROI;
+    int camer1line2Direction;
+    int camer1line2Threshold;
+
+    std::vector<cv::Rect> camer2Line1ROI;
+    int camer2line1Direction;
+    int camer2line1Threshold;
+
+    std::vector<cv::Rect> camer2Line2ROI;
+    int camer2line2Direction;
+    int camer2line2Threshold;
+
+    cv::Point2d ComputeLeftCamerIntersection(cv::Mat &image);
+    cv::Point2d ComputeRightCamerIntersection(cv::Mat &image);
+
+    cv::Mat ComputeLeftCamerIntersectionShow(cv::Mat &image);
+    cv::Mat ComputeRightCamerIntersectionShow(cv::Mat &image);
+
 protected:
 
 	/*提取旋转角点轨迹*/
@@ -53,6 +79,13 @@ protected:
 	std::vector<cv::Vec4d> ConstructMidperpendiculars(Camera camera, const std::vector<cv::Mat>& rotationBoardImages);
 
 	cv::Point2d ComputeTranslationDirection(Camera camera, const std::vector<cv::Mat>& images);
+
+    cv::Point SearchPoint(const cv::Mat& image, const cv::Rect& roi,int direction,int threshold);
+
+    cv::Point2d ComputeOptimalIntersection(const std::vector<cv::Vec4d>& lines);
+
+\
+
 
 
 	nlohmann::json settings;

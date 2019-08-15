@@ -7,467 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>1750</width>
-    <height>785</height>
+    <height>990</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout_8">
-    <item row="0" column="1">
-     <widget class="QGroupBox" name="groupBox">
-      <property name="minimumSize">
-       <size>
-        <width>311</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>311</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="title">
-       <string>标定</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0" colspan="3">
-        <widget class="QPushButton" name="pushButton_calibration_registerCamera">
-         <property name="text">
-          <string>注册双相机</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="3">
-        <widget class="Line" name="line_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>旋转前后图像：</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QPushButton" name="pushButton_calibration_rotationCenter_curren">
-         <property name="text">
-          <string>当前点</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QPushButton" name="pushButton_calibration_rotationCenter_offset">
-         <property name="text">
-          <string>偏移点</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0" colspan="3">
-        <widget class="QPushButton" name="pushButton_calibration_rotationCenter">
-         <property name="text">
-          <string>旋转中心计算</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0" colspan="3">
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0">
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>X 平 移 方 向：</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QPushButton" name="pushButton_calibration_translationX_curren">
-         <property name="text">
-          <string>当前点</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="2">
-        <widget class="QPushButton" name="pushButton_calibration_translationX_offset">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="text">
-          <string>偏移点</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Y 平 移 方 向：</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="1">
-        <widget class="QPushButton" name="pushButton_calibration_translationY_curren_2">
-         <property name="text">
-          <string>当前点</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="2">
-        <widget class="QPushButton" name="pushButton_calibration_translationY_offset_2">
-         <property name="text">
-          <string>偏移点</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="0" colspan="3">
-        <widget class="QPushButton" name="pushButton_calibration_translationDirection">
-         <property name="text">
-          <string>标定平移方向</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QGroupBox" name="groupBox_2">
-      <property name="minimumSize">
-       <size>
-        <width>311</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>311</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="title">
-       <string>定位过程</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QGroupBox" name="groupBox_3">
-         <property name="title">
-          <string>点1</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_4">
-          <item row="0" column="0">
-           <widget class="QGroupBox" name="groupBox_4">
-            <property name="title">
-             <string>直线1</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_2">
-             <item row="0" column="1">
-              <widget class="QComboBox" name="comboBox_point1_line1_direction">
-               <item>
-                <property name="text">
-                 <string>从左到右</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从右到左</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从上到下</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从下到上</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_4">
-               <property name="text">
-                <string>方向：</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QLabel" name="label_5">
-               <property name="text">
-                <string>阈值：</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0" colspan="2">
-              <widget class="QPushButton" name="pushButton_point1_line1_roi1">
-               <property name="text">
-                <string>ROI1</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2" colspan="2">
-              <widget class="QPushButton" name="pushButton_point1_line1_roi2">
-               <property name="text">
-                <string>ROI2</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <widget class="QSpinBox" name="spinBox_point1_line1_threshold"/>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QGroupBox" name="groupBox_5">
-            <property name="title">
-             <string>直线2</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_3">
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_6">
-               <property name="text">
-                <string>方向：</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QComboBox" name="comboBox_point1_line2_direction">
-               <item>
-                <property name="text">
-                 <string>从左到右</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从右到左</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从上到下</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从下到上</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QLabel" name="label_7">
-               <property name="text">
-                <string>阈值：</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0" colspan="2">
-              <widget class="QPushButton" name="pushButton_point1_line2_roi1">
-               <property name="text">
-                <string>ROI1</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2" colspan="2">
-              <widget class="QPushButton" name="pushButton_point1_line2_roi2">
-               <property name="text">
-                <string>ROI2</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <widget class="QSpinBox" name="spinBox_point1_line2_threshold"/>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="Line" name="line_3">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QGroupBox" name="groupBox_6">
-         <property name="title">
-          <string>点1</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_5">
-          <item row="0" column="0">
-           <widget class="QGroupBox" name="groupBox_7">
-            <property name="title">
-             <string>直线1</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_6">
-             <item row="0" column="1">
-              <widget class="QComboBox" name="comboBox_point1_line1_direction_2">
-               <item>
-                <property name="text">
-                 <string>从左到右</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从右到左</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从上到下</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从下到上</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_8">
-               <property name="text">
-                <string>方向：</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QLabel" name="label_9">
-               <property name="text">
-                <string>阈值：</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0" colspan="2">
-              <widget class="QPushButton" name="pushButton_point1_line1_roi1_2">
-               <property name="text">
-                <string>ROI1</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2" colspan="2">
-              <widget class="QPushButton" name="pushButton_point1_line1_roi2_2">
-               <property name="text">
-                <string>ROI2</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <widget class="QSpinBox" name="spinBox_point1_line1_threshold_2"/>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QGroupBox" name="groupBox_8">
-            <property name="title">
-             <string>直线2</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_7">
-             <item row="0" column="2">
-              <widget class="QLabel" name="label_11">
-               <property name="text">
-                <string>阈值：</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_10">
-               <property name="text">
-                <string>方向：</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QComboBox" name="comboBox_point1_line2_direction_2">
-               <item>
-                <property name="text">
-                 <string>从左到右</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从右到左</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从上到下</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>从下到上</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item row="1" column="0" colspan="2">
-              <widget class="QPushButton" name="pushButton_point1_line2_roi1_2">
-               <property name="text">
-                <string>ROI1</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2" colspan="2">
-              <widget class="QPushButton" name="pushButton_point1_line2_roi2_2">
-               <property name="text">
-                <string>ROI2</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <widget class="QSpinBox" name="spinBox_point1_line2_threshold_2"/>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="Line" name="line_4">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_StandardPosition">
-         <property name="text">
-          <string>产品示教</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_save_setting">
-         <property name="text">
-          <string>保存配置</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_test">
-         <property name="text">
-          <string>测试</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="0" column="0" rowspan="2">
+   <layout class="QHBoxLayout" name="horizontalLayout_14">
+    <item>
      <widget class="QWidget" name="widget" native="true">
       <property name="styleSheet">
        <string notr="true"/>
@@ -476,7 +24,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QScrollArea" name="scrollArea">
+          <widget class="ScrollArea" name="scrollArea_camer1">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(165, 165, 165);</string>
            </property>
@@ -488,15 +36,15 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>693</width>
-              <height>368</height>
+              <width>644</width>
+              <height>470</height>
              </rect>
             </property>
            </widget>
           </widget>
          </item>
          <item>
-          <widget class="QScrollArea" name="scrollArea_2">
+          <widget class="ScrollArea" name="scrollArea_camer2">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(165, 165, 165);</string>
            </property>
@@ -508,8 +56,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>692</width>
-              <height>368</height>
+              <width>643</width>
+              <height>470</height>
              </rect>
             </property>
            </widget>
@@ -524,25 +72,1253 @@
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>190</height>
+             <height>200</height>
             </size>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QGroupBox" name="groupBox_9">
+           <property name="minimumSize">
+            <size>
+             <width>645</width>
+             <height>0</height>
+            </size>
+           </property>
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>190</height>
+             <height>200</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+min-width:110px
+}</string>
            </property>
            <property name="title">
             <string>控制</string>
            </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string> X  轴：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="lineEdit_readOnly_current_axisX">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLineEdit" name="lineEdit_current_axisX"/>
+              </item>
+              <item row="0" column="3">
+               <widget class="QPushButton" name="pushButton_move_axisX">
+                <property name="text">
+                 <string>移动</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QPushButton" name="pushButton_moveP_negative_axisX">
+                <property name="text">
+                 <string>点动-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QPushButton" name="pushButton_moveP_positive_axisX">
+                <property name="text">
+                 <string>点动+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string> Y  轴：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="lineEdit_readOnly_current_axisY">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLineEdit" name="lineEdit_current_axisY"/>
+              </item>
+              <item row="1" column="3">
+               <widget class="QPushButton" name="pushButton_move_axisY">
+                <property name="text">
+                 <string>移动</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="4">
+               <widget class="QPushButton" name="pushButton_moveP_negative_axisY">
+                <property name="text">
+                 <string>点动-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="5">
+               <widget class="QPushButton" name="pushButton_moveP_positive_axisY">
+                <property name="text">
+                 <string>点动+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_15">
+                <property name="text">
+                 <string> Z  轴：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="lineEdit_readOnly_current_axisZ">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLineEdit" name="lineEdit_current_axisZ"/>
+              </item>
+              <item row="2" column="3">
+               <widget class="QPushButton" name="pushButton_move_axisZ">
+                <property name="text">
+                 <string>移动</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="4">
+               <widget class="QPushButton" name="pushButton_moveP_negative_axisZ">
+                <property name="text">
+                 <string>点动-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="5">
+               <widget class="QPushButton" name="pushButton_moveP_positive_axisZ">
+                <property name="text">
+                 <string>点动+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_16">
+                <property name="text">
+                 <string>传送轴：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="lineEdit_readOnly_current_axisT">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QLineEdit" name="lineEdit_current_axisT"/>
+              </item>
+              <item row="3" column="3">
+               <widget class="QPushButton" name="pushButton_move_axisT">
+                <property name="text">
+                 <string>移动</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="4">
+               <widget class="QPushButton" name="pushButton_moveP_negative_axisT">
+                <property name="text">
+                 <string>点动-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="5">
+               <widget class="QPushButton" name="pushButton_moveP_positive_axisT">
+                <property name="text">
+                 <string>点动+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_17">
+                <property name="text">
+                 <string>旋转轴：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QLineEdit" name="lineEdit_readOnly_current_axisA">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QLineEdit" name="lineEdit_current_axisA"/>
+              </item>
+              <item row="4" column="3">
+               <widget class="QPushButton" name="pushButton_move_axisA">
+                <property name="text">
+                 <string>移动</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="4">
+               <widget class="QPushButton" name="pushButton_moveP_negative_axisA">
+                <property name="text">
+                 <string>点动-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="5">
+               <widget class="QPushButton" name="pushButton_moveP_positive_axisA">
+                <property name="text">
+                 <string>点动+</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>409</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	min-height:25
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="minimumSize">
+          <size>
+           <width>391</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>391</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="currentIndex">
+          <number>3</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>标定</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <property name="spacing">
+            <number>12</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="pushButton_calibration_registerCamera">
+             <property name="text">
+              <string>注册双相机</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_10">
+             <property name="title">
+              <string>旋转中心：</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_11">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pushButton_calibration_rotationCenter_curren">
+                <property name="text">
+                 <string>当前点</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="pushButton_calibration_rotationCenter_offset">
+                <property name="text">
+                 <string>偏移点</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_calibration_rotationCenter">
+                <property name="text">
+                 <string>旋转中心计算</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+             <zorder>pushButton_calibration_rotationCenter</zorder>
+             <zorder>pushButton_calibration_rotationCenter_curren</zorder>
+             <zorder>pushButton_calibration_rotationCenter_offset</zorder>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_11">
+             <property name="title">
+              <string>平移方向：</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label">
+                <property name="minimumSize">
+                 <size>
+                  <width>42</width>
+                  <height>16</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>42</width>
+                  <height>16</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>X方向：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="pushButton_calibration_translationX_curren">
+                <property name="text">
+                 <string>当前点</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="pushButton_calibration_translationX_offset">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="text">
+                 <string>偏移点</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>36</width>
+                  <height>16</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>36</width>
+                  <height>16</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Y方向:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="pushButton_calibration_translationY_curren_2">
+                <property name="text">
+                 <string>当前点</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QPushButton" name="pushButton_calibration_translationY_offset_2">
+                <property name="text">
+                 <string>偏移点</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="3">
+               <widget class="QPushButton" name="pushButton_calibration_translationDirection">
+                <property name="text">
+                 <string>标定平移方向</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_save_Json">
+             <property name="text">
+              <string>保存配置</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>定位</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>相机1</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0">
+               <widget class="QGroupBox" name="groupBox_4">
+                <property name="title">
+                 <string>直线1</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_2">
+                 <item row="2" column="1">
+                  <widget class="QPushButton" name="pushButton_line1_roi2">
+                   <property name="text">
+                    <string>ROI2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="pushButton_line1_roi1">
+                   <property name="text">
+                    <string>ROI1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <item>
+                    <widget class="QLabel" name="label_4">
+                     <property name="maximumSize">
+                      <size>
+                       <width>36</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>方向：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_line1_direction">
+                     <item>
+                      <property name="text">
+                       <string>从左到右</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从右到左</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从上到下</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从下到上</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_line1_roi1">
+                   <property name="text">
+                    <string>Rect:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="label_line1_roi2">
+                   <property name="text">
+                    <string>Rect:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <item>
+                    <widget class="QLabel" name="label_5">
+                     <property name="maximumSize">
+                      <size>
+                       <width>36</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>阈值：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="spinBox_line1_threshold">
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QGroupBox" name="groupBox_5">
+                <property name="title">
+                 <string>直线2</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_3">
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="pushButton_line2_roi1">
+                   <property name="text">
+                    <string>ROI1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QPushButton" name="pushButton_line2_roi2">
+                   <property name="text">
+                    <string>ROI2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_5">
+                   <item>
+                    <widget class="QLabel" name="label_6">
+                     <property name="maximumSize">
+                      <size>
+                       <width>36</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>方向：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_line2_direction">
+                     <item>
+                      <property name="text">
+                       <string>从左到右</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从右到左</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从上到下</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从下到上</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_line2_roi1">
+                   <property name="text">
+                    <string>Rect:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QHBoxLayout" name="horizontalLayout_6">
+                   <item>
+                    <widget class="QLabel" name="label_7">
+                     <property name="maximumSize">
+                      <size>
+                       <width>36</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>阈值：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="spinBox_line2_threshold">
+                     <property name="maximum">
+                      <number>255</number>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="label_line2_roi2">
+                   <property name="text">
+                    <string>Rect:</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="pushButton_camer1_Test">
+                <property name="styleSheet">
+                 <string notr="true">min-height:20</string>
+                </property>
+                <property name="text">
+                 <string>测试</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_6">
+             <property name="title">
+              <string>相机2</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0">
+               <widget class="QGroupBox" name="groupBox_7">
+                <property name="title">
+                 <string>直线1</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_6">
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_line1_roi1_2">
+                   <property name="text">
+                    <string>Rect:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="pushButton_line1_roi1_2">
+                   <property name="text">
+                    <string>ROI1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QPushButton" name="pushButton_line1_roi2_2">
+                   <property name="text">
+                    <string>ROI2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_7">
+                   <item>
+                    <widget class="QLabel" name="label_8">
+                     <property name="maximumSize">
+                      <size>
+                       <width>36</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>方向：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_line1_direction_2">
+                     <item>
+                      <property name="text">
+                       <string>从左到右</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从右到左</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从上到下</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从下到上</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="label_line1_roi2_2">
+                   <property name="text">
+                    <string>Rect:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QHBoxLayout" name="horizontalLayout_8">
+                   <item>
+                    <widget class="QLabel" name="label_9">
+                     <property name="maximumSize">
+                      <size>
+                       <width>36</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>阈值：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="spinBox_line1_threshold_2"/>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QGroupBox" name="groupBox_8">
+                <property name="title">
+                 <string>直线2</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_7">
+                 <item row="2" column="1">
+                  <widget class="QPushButton" name="pushButton_line2_roi2_2">
+                   <property name="text">
+                    <string>ROI2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="pushButton_line2_roi1_2">
+                   <property name="text">
+                    <string>ROI1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QHBoxLayout" name="horizontalLayout_10">
+                   <item>
+                    <widget class="QLabel" name="label_11">
+                     <property name="maximumSize">
+                      <size>
+                       <width>36</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>阈值：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="spinBox_line2_threshold_2"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_line2_roi1_2">
+                   <property name="text">
+                    <string>Rect:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="label_line2_roi2_2">
+                   <property name="text">
+                    <string>Rect:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_9">
+                   <item>
+                    <widget class="QLabel" name="label_10">
+                     <property name="maximumSize">
+                      <size>
+                       <width>36</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>方向：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_line2_direction_2">
+                     <item>
+                      <property name="text">
+                       <string>从左到右</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从右到左</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从上到下</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>从下到上</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="pushButton_camer2_Test">
+                <property name="styleSheet">
+                 <string notr="true">min-height:20</string>
+                </property>
+                <property name="text">
+                 <string>测试</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>设置</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>12</number>
+           </property>
+           <property name="topMargin">
+            <number>12</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="title">
+              <string>相机1</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="1" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_16">
+                <item>
+                 <widget class="QLabel" name="label_13">
+                  <property name="text">
+                   <string>曝光：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_camer_ext"/>
+                </item>
+               </layout>
+              </item>
+              <item row="0" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_15">
+                <item>
+                 <widget class="QLabel" name="label_12">
+                  <property name="text">
+                   <string>I  P：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_camer_ip"/>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="pushButton_set_camer_ext">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">min-height:20</string>
+                </property>
+                <property name="text">
+                 <string>设置曝光</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
+              <string>相机2</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="1" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_21">
+                <item>
+                 <widget class="QLabel" name="label_18">
+                  <property name="text">
+                   <string>曝光：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_camer_ext2"/>
+                </item>
+               </layout>
+              </item>
+              <item row="0" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_22">
+                <item>
+                 <widget class="QLabel" name="label_19">
+                  <property name="text">
+                   <string>I  P：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_camer_ip2"/>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="pushButton_set_camer_ext2">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">min-height:20</string>
+                </property>
+                <property name="text">
+                 <string>设置曝光</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>329</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_save_setting">
+             <property name="text">
+              <string>保存设置</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_4">
+          <attribute name="title">
+           <string>控制</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="11" column="0" colspan="3">
+            <widget class="QPushButton" name="pushButton_inProduct">
+             <property name="text">
+              <string>上料</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QPushButton" name="pushButton_control_record_load">
+             <property name="text">
+              <string>记录</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>上料位置：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QPushButton" name="pushButton_control_record_blanking">
+             <property name="text">
+              <string>记录</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="3">
+            <widget class="QPushButton" name="pushButton_control_platformIO">
+             <property name="text">
+              <string>平台吸气开</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="3">
+            <widget class="QPushButton" name="pushButton_control_proudctIO">
+             <property name="text">
+              <string>产品吸气开</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QPushButton" name="pushButton_control_move_platform">
+             <property name="text">
+              <string>移动</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>下台位置：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QPushButton" name="pushButton_control_move_detection">
+             <property name="text">
+              <string>移动</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QPushButton" name="pushButton_control_record_platform">
+             <property name="text">
+              <string>记录</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QPushButton" name="pushButton_control_move_blanking">
+             <property name="text">
+              <string>移动</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QPushButton" name="pushButton_control_record_detection">
+             <property name="text">
+              <string>记录</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>下料位置：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_23">
+             <property name="text">
+              <string>定位位置：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="3">
+            <widget class="QPushButton" name="pushButton_control_enable">
+             <property name="text">
+              <string>使能开</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QPushButton" name="pushButton_control_move_load">
+             <property name="text">
+              <string>移动</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <widget class="QPushButton" name="pushButton_control_moveZero">
+             <property name="text">
+              <string>回零</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QCheckBox" name="checkBox">
+             <property name="text">
+              <string>记录</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="3">
+            <widget class="Line" name="line_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0" colspan="3">
+            <widget class="Line" name="line_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0" colspan="3">
+            <widget class="QPushButton" name="pushButton_outProduct">
+             <property name="text">
+              <string>下料</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_StandardPosition">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>产品示教</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_camerContinue">
+         <property name="text">
+          <string>实时开</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_savePicture">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>保存图片</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_test">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>拍照</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_run">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>运行</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -551,6 +1327,14 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ScrollArea</class>
+   <extends>QScrollArea</extends>
+   <header location="global">scrollarea.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

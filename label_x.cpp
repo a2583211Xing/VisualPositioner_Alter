@@ -9,6 +9,7 @@ bool Label_X::eventFilter(QObject *obj, QEvent *evt)
 {
     if(isDraw)
     {
+
         QMouseEvent* mouseEvent = (QMouseEvent*) evt;
         if(evt->type() == QEvent::MouseButtonPress)
         {
@@ -16,6 +17,7 @@ bool Label_X::eventFilter(QObject *obj, QEvent *evt)
             if ((mouseEvent->buttons() & Qt::LeftButton))
             {
                 pressPoint = mouseEvent->pos();
+
             }
         }
         if (evt->type() == QEvent::MouseMove)
@@ -23,34 +25,21 @@ bool Label_X::eventFilter(QObject *obj, QEvent *evt)
             if ((mouseEvent->buttons() & Qt::LeftButton))
             {
                 releasePoint = mouseEvent->pos();
-            }
-        }
-
-
-
-        if(evt->type() == QEvent::MouseButtonPress)
-        {
-            if ((mouseEvent->buttons() & Qt::RightButton))
-            {
-                qDebug()<<"pressPoint: "<<pressPoint;
-                qDebug()<<"releasePoint: "<<releasePoint;
-                qDebug()<<"LabelSize: "<<this->size();
 
                 double radio = (double)this->size().width() / (double)img.cols;
 
-                QPoint leftUP = pressPoint/radio;
-                QPoint rightDown = releasePoint/radio;
+                leftUP       = pressPoint/radio;
+                rightDown = releasePoint/radio;
 
+                cv::Mat temp = imageShow.clone();
 
-//                cv::rectangle(img,cv::Point(leftUP.x(),leftUP.y()),cv::Point(rightDown.x(),rightDown.y()),cv::Scalar(0,255,0),1,cv::LINE_8);
-//                cv::imwrite("C:/Users/Administrator.XMOIW06RV4LYV5H/Desktop/temp1.jpg",img);
-                this->setPixmap(QPixmap::fromImage(MatToQImage(img)));
+                cv::rectangle(temp,cv::Point(leftUP.x(),leftUP.y()),cv::Point(rightDown.x(),rightDown.y()),cv::Scalar(0,255,0),1,cv::LINE_8);
 
+                this->setPixmap(QPixmap::fromImage(MatToQImage(temp)));
 
-                isDraw = false;
             }
-
         }
+
     }
 
     return QLabel::eventFilter(obj,evt);
@@ -59,7 +48,14 @@ bool Label_X::eventFilter(QObject *obj, QEvent *evt)
 void Label_X::setImage(cv::Mat img)
 {
     this->img = img;
-    this->setPixmap(QPixmap::fromImage(MatToQImage(img)));
+    if(this->img.channels() == 1){
+        cv::cvtColor(img, imageShow, CV_GRAY2BGR);
+    }
+    else{
+        imageShow = img.clone();
+    }
+
+    this->setPixmap(QPixmap::fromImage(MatToQImage(imageShow)));
 }
 
 QImage Label_X::MatToQImage(const cv::Mat &mat)
